@@ -19,10 +19,10 @@
                 <ul>
                     <li><a href="index.html">Página inicial</a></li>
                     <li><a href="quemsomos.html">Quem somos</a></li>
-                    <!-- Adicione outros itens do menu conforme necessário -->
                 </ul>
             </nav>
         </div>
+
         <a href="#" class="ancora-cabeçalho"><img src="___v404_32.png" alt="logo" class="imagem-cabeçalho"></a>
         <ul class="lista-do-cabeçalho">
             <li class="item-lista-cabeçalho" class="ancoras-lista"><a href="index.html"
@@ -109,9 +109,13 @@
         document.addEventListener('DOMContentLoaded', function () {
             var menuHamburguer = document.querySelector('.menu-hamburguer');
             var menuNavegacao = document.querySelector('.menu-navegacao');
+            let botao = document.querySelector('.botao-cabecalho')
+            let sectionimage = document.querySelector('.section-das-imagens')
 
             menuHamburguer.addEventListener('click', function () {
                 menuNavegacao.style.display = (menuNavegacao.style.display === 'block') ? 'none' : 'block';
+                botao.style.display = (botao.style.display === 'none') ? 'block' : 'none';
+
             });
         });
     </script>
