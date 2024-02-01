@@ -46,3 +46,16 @@ document.addEventListener("DOMContentLoaded", function () {
     currentIndex = index;
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  let botoesCarousel = document.getElementsByClassName("botoes-carousel");
+
+  Array.from(botoesCarousel).forEach((elemento) => {
+    elemento.addEventListener("click", () => {
+      let linkDoacoes =
+        "https://paybox.doare.org/paybox?lang=br&currency=BRL&orgId=41118a70-a887-11ed-a825-06534163e0b3&values=30,50,150,300,500&amount=30&subscribe=0&newsletter=0&subscriptionAmount=30&showSubscription=1&referer=https:%2F%2Finstitutopensandobem.com%2F";
+
+      window.open(linkDoacoes, "_blank");
+    });
+  });
+});
