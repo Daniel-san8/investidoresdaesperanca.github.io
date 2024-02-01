@@ -17,7 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let currentIndex = 0;
   const totalSlides = document.querySelectorAll(".carousel img").length;
+  const intervalTime = 3000; // Intervalo de tempo em milissegundos (3 segundos, por exemplo)
 
+  // Adiciona listeners aos botões de navegação
   prevBtn.addEventListener("click", function () {
     showSlide(currentIndex - 1);
   });
@@ -26,6 +28,12 @@ document.addEventListener("DOMContentLoaded", function () {
     showSlide(currentIndex + 1);
   });
 
+  // Adiciona a transição automática
+  setInterval(function () {
+    showSlide(currentIndex + 1);
+  }, intervalTime);
+
+  // Função para mostrar o slide
   function showSlide(index) {
     if (index < 0) {
       index = totalSlides - 1;
